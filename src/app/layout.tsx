@@ -25,9 +25,11 @@ export default function RootLayout({
         <div className="w-full flex justify-center">
             <Navbar />
         </div>
-        <main className="w-[1440px] bg-[#DCE2E5] h-screen p-20">
-          {children}
-        </main>        
+        <div className="w-full flex justify-center">
+          <main className="w-[1440px] bg-[#DCE2E5] h-screen p-20">
+            {children}
+          </main>
+        </div>       
         </body>
     </html>
   );
