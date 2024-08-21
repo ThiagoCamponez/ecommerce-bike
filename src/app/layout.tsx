@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "./Components/Navbar";
 import {Sora} from "next/font/google";
+import clsx from "clsx";
 
 
 const fontSora = Sora({
@@ -21,12 +22,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={fontSora.className}>
+      <body className={clsx(fontSora.className, "bg-[#F0F0F5]")}>
         <div className="w-full flex justify-center">
             <Navbar />
         </div>
         <div className="w-full flex justify-center">
-          <main className="w-[1440px] bg-[#DCE2E5] h-screen p-20">
+          <main className="w-[1440px] h-screen p-20">
             {children}
           </main>
         </div>       
